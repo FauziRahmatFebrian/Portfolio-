@@ -69,12 +69,12 @@ const InteractiveSkills = () => {
           </p>
         </div>
 
-        {/* Interactive Skills Spheres */}
-        <div className="relative min-h-[600px] flex items-center justify-center">
-          <div className="relative w-full max-w-4xl aspect-square">
+        {/* Interactive Skills Spheres with closer spacing */}
+        <div className="relative min-h-[500px] flex items-center justify-center">
+          <div className="relative w-full max-w-3xl aspect-square">
             {skills.map((skill, index) => {
               const angle = (index * 360) / skills.length;
-              const radius = 200;
+              const radius = 150; // Reduced from 200 to bring spheres closer
               const x = Math.cos((angle * Math.PI) / 180) * radius;
               const y = Math.sin((angle * Math.PI) / 180) * radius;
               
@@ -85,7 +85,7 @@ const InteractiveSkills = () => {
                   key={skill.name}
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
                   style={{
-                    transform: `translate(-50%, -50%) translate(${x + mousePosition.x * 20}px, ${y + mousePosition.y * 20}px)`,
+                    transform: `translate(-50%, -50%) translate(${x + mousePosition.x * 15}px, ${y + mousePosition.y * 15}px)`,
                     transition: 'all 0.3s ease-out'
                   }}
                   onMouseEnter={() => setHoveredSkill(index)}
@@ -93,7 +93,7 @@ const InteractiveSkills = () => {
                 >
                   {/* Skill Sphere */}
                   <div className={`
-                    w-24 h-24 md:w-32 md:h-32 rounded-full 
+                    w-20 h-20 md:w-28 md:h-28 rounded-full 
                     bg-gradient-to-br ${skill.color} 
                     flex items-center justify-center
                     shadow-2xl shadow-primary/20
@@ -106,7 +106,7 @@ const InteractiveSkills = () => {
                     animationDelay: `${index * 0.5}s`,
                     transform: hoveredSkill === index ? 'scale(1.25) rotateY(180deg)' : undefined
                   }}>
-                    <Icon className="w-8 h-8 md:w-12 md:h-12 text-white" />
+                    <Icon className="w-6 h-6 md:w-10 md:h-10 text-white" />
                   </div>
 
                   {/* Skill Info */}
@@ -169,13 +169,6 @@ const InteractiveSkills = () => {
             );
           })}
         </div>
-      </div>
-
-      {/* Background Decoration */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-float opacity-60" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-primary rounded-full animate-float opacity-40" style={{ animationDelay: '3s' }} />
-        <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-primary rounded-full animate-float opacity-50" style={{ animationDelay: '2s' }} />
       </div>
     </section>
   );

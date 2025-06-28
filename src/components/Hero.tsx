@@ -85,22 +85,22 @@ const Hero = () => {
           <h1 className="text-6xl md:text-8xl font-bold mb-4 glow-text tracking-tight">
             Hi, I'm <span className="text-primary">John</span>
           </h1>
-          <div className="text-xl md:text-2xl text-muted-foreground mb-6 h-8 flex items-center justify-center">
+          <div className="text-xl md:text-2xl text-muted-foreground mb-6 h-8 flex items-center justify-center overflow-hidden">
             <span 
               key={currentRoleIndex}
-              className="inline-block animate-slide-up text-primary font-semibold"
+              className="inline-block text-primary font-semibold animate-slide-right"
             >
               {roles[currentRoleIndex]}
             </span>
           </div>
         </div>
 
+        {/* description, CTA buttons, social links, scroll indicator */}
         <p className="text-lg md:text-xl max-w-2xl mx-auto mb-12 text-muted-foreground leading-relaxed animate-slide-up" style={{ animationDelay: '1s' }}>
           Saya adalah seorang profesional pengelolaan data yang berpengalaman dalam menganalisis, 
           mengelola, dan mengoptimalkan data untuk mendukung pengambilan keputusan bisnis yang tepat.
         </p>
 
-        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: '1.2s' }}>
           <button className="px-8 py-4 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
             Lihat Portfolio Saya
@@ -110,7 +110,6 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Social Links */}
         <div className="flex justify-center space-x-6 mb-16 animate-slide-up" style={{ animationDelay: '1.4s' }}>
           <a href="#" className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 hover:scale-110 group">
             <Github className="w-6 h-6 group-hover:text-primary transition-colors" />
@@ -123,7 +122,6 @@ const Hero = () => {
           </a>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="animate-bounce">
           <ChevronDown className="w-8 h-8 mx-auto text-primary opacity-70" />
         </div>
