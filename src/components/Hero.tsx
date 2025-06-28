@@ -51,42 +51,57 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="text-center z-10 px-4">
-        <div className="mb-8 animate-slide-up">
+        {/* Profile Photo */}
+        <div className="mb-8 animate-slide-up flex justify-center">
+          <div className="relative">
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20 animate-glow">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                alt="Profile Photo"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full animate-pulse"></div>
+            <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-primary/70 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+          </div>
+        </div>
+
+        <div className="mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <h1 className="text-6xl md:text-8xl font-bold mb-4 glow-text tracking-tight">
             Hi, I'm <span className="text-primary">John</span>
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-6">
-            <span className="inline-block animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              Full Stack Developer
-            </span>
-            <span className="mx-4 text-primary">•</span>
             <span className="inline-block animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              UI/UX Designer
+              Data Analyst
             </span>
             <span className="mx-4 text-primary">•</span>
             <span className="inline-block animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              Creative Thinker
+              Data Manager
+            </span>
+            <span className="mx-4 text-primary">•</span>
+            <span className="inline-block animate-slide-up" style={{ animationDelay: '0.8s' }}>
+              Business Intelligence
             </span>
           </div>
         </div>
 
-        <p className="text-lg md:text-xl max-w-2xl mx-auto mb-12 text-muted-foreground leading-relaxed animate-slide-up" style={{ animationDelay: '0.8s' }}>
-          I create stunning digital experiences that blend cutting-edge technology 
-          with beautiful design. Let's build something amazing together.
+        <p className="text-lg md:text-xl max-w-2xl mx-auto mb-12 text-muted-foreground leading-relaxed animate-slide-up" style={{ animationDelay: '1s' }}>
+          Saya adalah seorang profesional pengelolaan data yang berpengalaman dalam menganalisis, 
+          mengelola, dan mengoptimalkan data untuk mendukung pengambilan keputusan bisnis yang tepat.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: '1s' }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: '1.2s' }}>
           <button className="px-8 py-4 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
-            View My Work
+            Lihat Portfolio Saya
           </button>
           <button className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-black transition-all duration-300 hover:scale-105">
-            Get In Touch
+            Hubungi Saya
           </button>
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center space-x-6 mb-16 animate-slide-up" style={{ animationDelay: '1.2s' }}>
+        <div className="flex justify-center space-x-6 mb-16 animate-slide-up" style={{ animationDelay: '1.4s' }}>
           <a href="#" className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 hover:scale-110 group">
             <Github className="w-6 h-6 group-hover:text-primary transition-colors" />
           </a>

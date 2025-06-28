@@ -16,10 +16,12 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Beranda', href: '#home' },
+    { name: 'Tentang', href: '#about' },
+    { name: 'Keahlian', href: '#skills' },
+    { name: 'Proyek', href: '#projects' },
+    { name: 'Pendidikan', href: '#education' },
+    { name: 'Kontak', href: '#contact' }
   ];
 
   return (
@@ -46,7 +48,7 @@ const Navigation = () => {
               </a>
             ))}
             <button className="px-6 py-2 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105">
-              Hire Me
+              Hubungi Saya
             </button>
           </div>
 
@@ -61,7 +63,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-64 pb-4' : 'max-h-0'
+          isOpen ? 'max-h-96 pb-4' : 'max-h-0'
         }`}>
           <div className="space-y-4 pt-4">
             {navItems.map((item) => (
@@ -75,7 +77,7 @@ const Navigation = () => {
               </a>
             ))}
             <button className="w-full px-6 py-2 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300">
-              Hire Me
+              Hubungi Saya
             </button>
           </div>
         </div>
