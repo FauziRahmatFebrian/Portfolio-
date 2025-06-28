@@ -83,7 +83,9 @@ const InteractiveSkills = () => {
               return (
                 <div
                   key={skill.name}
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
+                  className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group ${
+                    hoveredSkill === index ? 'z-[9999]' : 'z-10'
+                  }`}
                   style={{
                     transform: `translate(-50%, -50%) translate(${x + mousePosition.x * 15}px, ${y + mousePosition.y * 15}px)`,
                     transition: 'all 0.3s ease-out'
@@ -109,12 +111,13 @@ const InteractiveSkills = () => {
                     <Icon className="w-6 h-6 md:w-10 md:h-10 text-white" />
                   </div>
 
-                  {/* Skill Info */}
+                  {/* Skill Info - Always on top with highest z-index */}
                   <div className={`
                     absolute top-full left-1/2 transform -translate-x-1/2 mt-4
-                    bg-card/90 backdrop-blur-sm rounded-lg p-4 min-w-[200px] text-center
+                    bg-card/95 backdrop-blur-sm rounded-lg p-4 min-w-[200px] text-center
                     border border-primary/20 shadow-xl
                     transition-all duration-300
+                    z-[10000]
                     ${hoveredSkill === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}
                   `}>
                     <h3 className="font-bold text-primary mb-2">{skill.name}</h3>
