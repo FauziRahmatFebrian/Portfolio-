@@ -1,9 +1,15 @@
-
 import { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+
+  const roles = [
+    "Data Analyst",
+    "Data Manager", 
+    "Business Intelligence"
+  ];
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -15,6 +21,15 @@ const Hero = () => {
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  // Animasi pergantian role
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -70,17 +85,12 @@ const Hero = () => {
           <h1 className="text-6xl md:text-8xl font-bold mb-4 glow-text tracking-tight">
             Hi, I'm <span className="text-primary">John</span>
           </h1>
-          <div className="text-xl md:text-2xl text-muted-foreground mb-6">
-            <span className="inline-block animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              Data Analyst
-            </span>
-            <span className="mx-4 text-primary">•</span>
-            <span className="inline-block animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              Data Manager
-            </span>
-            <span className="mx-4 text-primary">•</span>
-            <span className="inline-block animate-slide-up" style={{ animationDelay: '0.8s' }}>
-              Business Intelligence
+          <div className="text-xl md:text-2xl text-muted-foreground mb-6 h-8 flex items-center justify-center">
+            <span 
+              key={currentRoleIndex}
+              className="inline-block animate-slide-up text-primary font-semibold"
+            >
+              {roles[currentRoleIndex]}
             </span>
           </div>
         </div>

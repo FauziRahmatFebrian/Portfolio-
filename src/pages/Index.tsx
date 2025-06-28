@@ -2,7 +2,7 @@
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import Skills from '../components/Skills';
+import InteractiveSkills from '../components/InteractiveSkills';
 import Projects from '../components/Projects';
 import Education from '../components/Education';
 import Contact from '../components/Contact';
@@ -18,7 +18,7 @@ const Index = () => {
         </section>
         
         <About />
-        <Skills />
+        <InteractiveSkills />
         <Projects />
         <Education />
         <Contact />
