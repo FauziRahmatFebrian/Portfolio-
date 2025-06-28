@@ -1,12 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Navigation from '../components/Navigation';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <Navigation />
+      
+      <main>
+        <section id="home">
+          <Hero />
+        </section>
+        
+        <About />
+        <Projects />
+        <Contact />
+      </main>
+
+      {/* Footer */}
+      <footer className="py-8 text-center border-t border-border">
+        <div className="max-w-6xl mx-auto px-4">
+          <p className="text-muted-foreground">
+            © 2024 John Doe. Built with ❤️ and lots of ☕
+          </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            Designed & Developed with React, TypeScript & Tailwind CSS
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
