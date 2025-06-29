@@ -33,7 +33,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div 
@@ -66,8 +66,8 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="text-center z-10 px-4">
-        {/* Profile Photo */}
-        <div className="mb-8 animate-slide-up flex justify-center">
+        {/* Profile Photo - moved down with additional top margin */}
+        <div className="mb-8 mt-12 animate-slide-up flex justify-center">
           <div className="relative">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20 animate-glow">
               <img 
@@ -95,7 +95,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* description, CTA buttons, social links, scroll indicator */}
         <p className="text-lg md:text-xl max-w-2xl mx-auto mb-12 text-muted-foreground leading-relaxed animate-slide-up" style={{ animationDelay: '1s' }}>
           Saya adalah seorang profesional pengelolaan data yang berpengalaman dalam menganalisis, 
           mengelola, dan mengoptimalkan data untuk mendukung pengambilan keputusan bisnis yang tepat.
@@ -127,7 +126,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Floating 3D Elements */}
       <div className="absolute top-20 left-20 w-4 h-4 bg-primary rounded-full animate-float opacity-60" style={{ animationDelay: '1s' }} />
       <div className="absolute top-40 right-32 w-2 h-2 bg-primary rounded-full animate-float opacity-40" style={{ animationDelay: '3s' }} />
       <div className="absolute bottom-32 left-40 w-3 h-3 bg-primary rounded-full animate-float opacity-50" style={{ animationDelay: '2s' }} />
