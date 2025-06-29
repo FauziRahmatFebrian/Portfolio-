@@ -1,4 +1,5 @@
 
+import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -6,8 +7,21 @@ import InteractiveSkills from '../components/InteractiveSkills';
 import Projects from '../components/Projects';
 import Education from '../components/Education';
 import Contact from '../components/Contact';
+import LoadingScreen from '../components/LoadingScreen';
+import { useResourceLoader } from '../hooks/useResourceLoader';
 
 const Index = () => {
+  const [showContent, setShowContent] = useState(false);
+  const { isLoading } = useResourceLoader();
+
+  const handleLoadingComplete = () => {
+    setShowContent(true);
+  };
+
+  if (isLoading || !showContent) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
