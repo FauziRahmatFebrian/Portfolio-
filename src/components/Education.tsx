@@ -4,37 +4,29 @@ import { GraduationCap, School, Calendar, Award } from 'lucide-react';
 const Education = () => {
   const education = [
     {
-      degree: "Master of Data Science",
+      degree: "S1 Sains Informasi",
       institution: "Universitas Indonesia",
-      period: "2020 - 2022",
-      description: "Spesialisasi dalam Machine Learning, Big Data Analytics, dan Statistical Modeling",
-      achievements: ["IPK: 3.85/4.00", "Thesis: Predictive Analytics for Business Intelligence"],
-      icon: Award
-    },
-    {
-      degree: "Bachelor of Computer Science",
-      institution: "Institut Teknologi Bandung",
-      period: "2016 - 2020",
-      description: "Fokus pada Database Systems, Software Engineering, dan Data Structures",
-      achievements: ["IPK: 3.72/4.00", "Cum Laude Graduate", "Best Final Project Award"],
+      period: "2023 - Sekarang",
+      description: "Mengkhususkan diri dalam analisis data dengan fokus pada penggunaan R, Python, dan SQL untuk pemrosesan dan analisis data",
+      achievements: ["IPK: 3.75/4.00", "Semester 4", "Fokus pada Data Science dan Information Systems"],
       icon: GraduationCap
     },
     {
-      degree: "SMA Negeri 1 Jakarta",
-      institution: "Jurusan IPA",
-      period: "2013 - 2016",
-      description: "Fokus pada Matematika, Fisika, dan Kimia dengan prestasi akademik yang konsisten",
-      achievements: ["Ranking 3 Terbaik", "Olimpiade Matematika Tingkat Provinsi"],
+      degree: "SMA",
+      institution: "MAN 21 Jakarta Utara",
+      period: "2020 - 2023",
+      description: "Jurusan IPA dengan fokus pada Matematika dan Sains sebagai dasar untuk studi lanjutan di bidang teknologi informasi",
+      achievements: ["Lulusan dengan prestasi baik", "Aktif dalam kegiatan akademik"],
       icon: School
     }
   ];
 
   const certifications = [
-    "Microsoft Certified: Azure Data Scientist Associate",
-    "Google Cloud Professional Data Engineer",
-    "Tableau Desktop Specialist",
-    "IBM Data Science Professional Certificate",
-    "AWS Certified Machine Learning - Specialty"
+    "Data Analysis with Python",
+    "SQL for Data Science",
+    "R Programming Fundamentals",
+    "Statistical Analysis Basics",
+    "Data Visualization Techniques"
   ];
 
   return (
@@ -47,7 +39,7 @@ const Education = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Perjalanan akademik yang solid dalam bidang teknologi informasi dan data science
+            Perjalanan akademik yang solid dalam bidang sains informasi dan data science
           </p>
         </div>
 
@@ -103,10 +95,10 @@ const Education = () => {
         <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Sertifikasi <span className="text-primary">Profesional</span>
+              Keterampilan & <span className="text-primary">Sertifikasi</span>
             </h3>
             <p className="text-muted-foreground">
-              Sertifikasi yang mendukung keahlian profesional saya
+              Keterampilan dan sertifikasi yang mendukung keahlian dalam analisis data
             </p>
           </div>
           

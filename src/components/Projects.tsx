@@ -4,34 +4,26 @@ import { ExternalLink, Github, Eye } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+      title: "Data Analysis Dashboard",
+      description: "Interactive dashboard untuk analisis data penjualan dengan visualisasi real-time menggunakan Python dan Streamlit. Dilengkapi dengan fitur filtering dan prediksi tren.",
+      tech: ["Python", "Streamlit", "Pandas", "Plotly"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
       github: "#",
       live: "#"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tech: ["Vue.js", "Firebase", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
+      title: "Customer Segmentation Analysis",
+      description: "Analisis segmentasi pelanggan menggunakan algoritma clustering K-means untuk membantu strategi pemasaran yang lebih efektif.",
+      tech: ["R", "SQL", "ggplot2", "Machine Learning"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
       github: "#",
       live: "#"
     },
     {
-      title: "AI Chat Interface",
-      description: "An intelligent chatbot interface with natural language processing, context awareness, and beautiful UI animations.",
-      tech: ["React", "OpenAI API", "TypeScript"],
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Portfolio Website",
-      description: "A responsive portfolio website with 3D animations, interactive elements, and optimized performance.",
-      tech: ["React", "Three.js", "Framer Motion"],
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+      title: "Database Management System",
+      description: "Sistem manajemen database untuk inventory management dengan query optimization dan reporting otomatis menggunakan SQL dan Python.",
+      tech: ["SQL", "Python", "PostgreSQL", "Tableau"],
+      image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=500&h=300&fit=crop",
       github: "#",
       live: "#"
     }
@@ -46,11 +38,11 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and passion for creating amazing digital experiences.
+            Berikut adalah beberapa project terbaru saya yang menunjukkan kemampuan dalam analisis data dan pengembangan solusi berbasis data.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
               key={project.title}

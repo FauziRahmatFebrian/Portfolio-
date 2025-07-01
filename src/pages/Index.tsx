@@ -28,7 +28,7 @@ const Index = () => {
       <footer className="py-8 text-center border-t border-border">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-muted-foreground">
-            © 2024 John Doe. Dibuat dengan ❤️ dan banyak ☕
+            © 2024 Fauzi Rahmat Febrian. Dibuat dengan ❤️ dan banyak ☕
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             Dirancang & Dikembangkan dengan React, TypeScript & Tailwind CSS

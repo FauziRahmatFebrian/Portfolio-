@@ -27,11 +27,11 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
-            Get In <span className="text-primary">Touch</span>
+            Hubungi <span className="text-primary">Saya</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your next project? Let's collaborate and create something amazing together.
+            Tertarik untuk berkolaborasi dalam proyek analisis data? Mari kita diskusikan bagaimana saya dapat membantu Anda mengubah data menjadi insights yang berharga.
           </p>
         </div>
 
@@ -45,19 +45,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Email</h3>
-                  <p className="text-muted-foreground">john.doe@example.com</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="glass-effect p-6 rounded-2xl hover:bg-primary/5 transition-all duration-300">
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-primary/20 rounded-full">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">fauzifebri428@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -68,18 +56,18 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Location</h3>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <h3 className="text-lg font-semibold mb-1">Lokasi</h3>
+                  <p className="text-muted-foreground">Bekasi Utara, Jawa Barat</p>
                 </div>
               </div>
             </div>
 
             <div className="pt-8">
-              <h3 className="text-xl font-semibold mb-4">Let's Connect</h3>
+              <h3 className="text-xl font-semibold mb-4">Mari Terhubung</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm always excited to work on new projects and collaborate with 
-                amazing people. Whether you have a specific project in mind or 
-                just want to chat about technology, feel free to reach out!
+                Saya selalu tertarik untuk mengerjakan proyek-proyek baru dan berkolaborasi 
+                dengan orang-orang hebat. Apakah Anda memiliki proyek analisis data yang spesifik 
+                atau hanya ingin berdiskusi tentang data science, jangan ragu untuk menghubungi saya!
               </p>
             </div>
           </div>
@@ -89,7 +77,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
+                  Nama
                 </label>
                 <input
                   type="text"
@@ -98,7 +86,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-background/50 border border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                  placeholder="Your name"
+                  placeholder="Nama Anda"
                   required
                 />
               </div>
@@ -114,14 +102,14 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-background/50 border border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                  placeholder="your.email@example.com"
+                  placeholder="email.anda@example.com"
                   required
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
+                  Pesan
                 </label>
                 <textarea
                   id="message"
@@ -130,7 +118,7 @@ const Contact = () => {
                   onChange={handleChange}
                   rows={6}
                   className="w-full px-4 py-3 bg-background/50 border border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Ceritakan tentang proyek Anda..."
                   required
                 />
               </div>
@@ -140,7 +128,7 @@ const Contact = () => {
                 className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-black font-semibold rounded-lg hover:bg-primary/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/25"
               >
                 <Send className="w-4 h-4" />
-                <span>Send Message</span>
+                <span>Kirim Pesan</span>
               </button>
             </form>
           </div>

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -83,7 +84,7 @@ const Hero = () => {
 
         <div className="mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <h1 className="text-6xl md:text-8xl font-bold mb-4 glow-text tracking-tight">
-            Hi, I'm <span className="text-primary">John</span>
+            Hi, I'm <span className="text-primary">Fauzi</span>
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-6 h-8 flex items-center justify-center overflow-hidden">
             <span 
@@ -95,14 +96,16 @@ const Hero = () => {
           </div>
         </div>
 
-        <p className="text-lg md:text-xl max-w-2xl mx-auto mb-12 text-muted-foreground leading-relaxed animate-slide-up" style={{ animationDelay: '1s' }}>
-          Saya adalah seorang profesional pengelolaan data yang berpengalaman dalam menganalisis, 
-          mengelola, dan mengoptimalkan data untuk mendukung pengambilan keputusan bisnis yang tepat.
+        <p className="text-lg md:text-xl max-w-4xl mx-auto mb-12 text-muted-foreground leading-relaxed animate-slide-up" style={{ animationDelay: '1s' }}>
+          Saya adalah mahasiswa Ilmu Informasi semester 4 yang mengkhususkan diri dalam analisis data, 
+          dengan keterampilan yang terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data. 
+          Saya bersemangat untuk mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan 
+          dan terus meningkatkan kemampuan teknis dan analitis saya untuk memecahkan tantangan data yang kompleks.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: '1.2s' }}>
           <button className="px-8 py-4 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
-            Lihat Portfolio Saya
+            Lihat Resume Saya
           </button>
           <button className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-black transition-all duration-300 hover:scale-105">
             Hubungi Saya
@@ -110,13 +113,13 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center space-x-6 mb-16 animate-slide-up" style={{ animationDelay: '1.4s' }}>
-          <a href="#" className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 hover:scale-110 group">
+          <a href="https://github.com/FauziRahmatFebrian" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 hover:scale-110 group">
             <Github className="w-6 h-6 group-hover:text-primary transition-colors" />
           </a>
-          <a href="#" className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 hover:scale-110 group">
+          <a href="https://www.linkedin.com/in/fauzirf27" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 hover:scale-110 group">
             <Linkedin className="w-6 h-6 group-hover:text-primary transition-colors" />
           </a>
-          <a href="#" className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 hover:scale-110 group">
+          <a href="mailto:fauzifebri428@gmail.com" className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 hover:scale-110 group">
             <Mail className="w-6 h-6 group-hover:text-primary transition-colors" />
           </a>
         </div>
