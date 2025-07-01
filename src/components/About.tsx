@@ -1,7 +1,12 @@
 
 import { Code, Palette, Zap, Heart } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const About = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [contentRef, contentVisible] = useScrollAnimation();
+  const [skillsRef, skillsVisible] = useScrollAnimation();
+
   const skills = [
     { icon: Code, title: "Development", desc: "React, Node.js, TypeScript" },
     { icon: Palette, title: "Design", desc: "UI/UX, Figma, Adobe Suite" },
@@ -12,7 +17,10 @@ const About = () => {
   return (
     <section id="about" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 scroll-animate ${titleVisible ? 'animate' : ''}`}
+        >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
             About <span className="text-primary">Me</span>
           </h2>
@@ -21,7 +29,10 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div 
+            ref={contentRef}
+            className={`space-y-6 scroll-animate-left ${contentVisible ? 'animate' : ''}`}
+          >
             <p className="text-lg leading-relaxed text-muted-foreground">
               I'm a passionate full-stack developer with over 5 years of experience 
               creating digital solutions that make a difference. My journey started 
@@ -44,7 +55,10 @@ const About = () => {
           </div>
 
           {/* Right Content - Skills Grid */}
-          <div className="grid grid-cols-2 gap-6">
+          <div 
+            ref={skillsRef}
+            className={`grid grid-cols-2 gap-6 scroll-animate-right ${skillsVisible ? 'animate' : ''}`}
+          >
             {skills.map((skill, index) => (
               <div 
                 key={skill.title}

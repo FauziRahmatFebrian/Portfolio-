@@ -1,7 +1,12 @@
 
 import { GraduationCap, School, Calendar, Award } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Education = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [timelineRef, timelineVisible] = useScrollAnimation();
+  const [certRef, certVisible] = useScrollAnimation();
+
   const education = [
     {
       degree: "Master of Data Science",
@@ -41,7 +46,10 @@ const Education = () => {
     <section id="education" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 scroll-animate ${titleVisible ? 'animate' : ''}`}
+        >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
             Pendidikan <span className="text-primary">Saya</span>
           </h2>
@@ -52,14 +60,17 @@ const Education = () => {
         </div>
 
         {/* Education Timeline */}
-        <div className="relative">
+        <div 
+          ref={timelineRef}
+          className={`relative scroll-animate ${timelineVisible ? 'animate' : ''}`}
+        >
           {/* Timeline Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary/30 hidden md:block"></div>
           
           {education.map((edu, index) => (
             <div 
               key={edu.degree}
-              className={`relative mb-12 ${index % 2 === 0 ? 'md:pr-1/2 md:text-right' : 'md:pl-1/2 md:ml-8'} animate-slide-up`}
+              className={`relative mb-12 ${index % 2 === 0 ? 'md:pr-1/2 md:text-right' : 'md:pl-1/2 md:ml-8'}`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Timeline Dot */}
@@ -101,7 +112,10 @@ const Education = () => {
 
         {/* Certifications */}
         <div className="mt-20">
-          <div className="text-center mb-12">
+          <div 
+            ref={certRef}
+            className={`text-center mb-12 scroll-animate ${certVisible ? 'animate' : ''}`}
+          >
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
               Sertifikasi <span className="text-primary">Profesional</span>
             </h3>
@@ -110,11 +124,11 @@ const Education = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-4 scroll-animate ${certVisible ? 'animate' : ''}`}>
             {certifications.map((cert, index) => (
               <div 
                 key={cert}
-                className="p-4 glass-effect rounded-lg hover:bg-primary/10 transition-all duration-300 hover:scale-105 group animate-slide-up"
+                className="p-4 glass-effect rounded-lg hover:bg-primary/10 transition-all duration-300 hover:scale-105 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center gap-3">

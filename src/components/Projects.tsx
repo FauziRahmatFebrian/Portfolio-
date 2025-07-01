@@ -1,7 +1,11 @@
 
 import { ExternalLink, Github, Eye } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Projects = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [projectsRef, projectsVisible] = useScrollAnimation();
+
   const projects = [
     {
       title: "E-Commerce Platform",
@@ -40,7 +44,10 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 scroll-animate ${titleVisible ? 'animate' : ''}`}
+        >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
             My <span className="text-primary">Projects</span>
           </h2>
@@ -50,7 +57,10 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div 
+          ref={projectsRef}
+          className={`grid md:grid-cols-2 gap-8 scroll-animate ${projectsVisible ? 'animate' : ''}`}
+        >
           {projects.map((project, index) => (
             <div 
               key={project.title}
