@@ -1,14 +1,10 @@
 
 import { useState, useEffect } from 'react';
 import { Database, BarChart3, Brain, FileSpreadsheet, Zap, Target } from 'lucide-react';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const InteractiveSkills = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [hoveredSkill, setHoveredSkill] = useState<number | null>(null);
-  const [titleRef, titleVisible] = useScrollAnimation();
-  const [skillsRef, skillsVisible] = useScrollAnimation();
-  const [listRef, listVisible] = useScrollAnimation();
 
   const skills = [
     {
@@ -64,10 +60,7 @@ const InteractiveSkills = () => {
   return (
     <section id="skills" className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
-        <div 
-          ref={titleRef}
-          className={`text-center mb-16 scroll-animate ${titleVisible ? 'animate' : ''}`}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
             Keahlian <span className="text-primary">Profesional</span>
           </h2>
@@ -77,10 +70,7 @@ const InteractiveSkills = () => {
         </div>
 
         {/* Interactive Skills Spheres with closer spacing */}
-        <div 
-          ref={skillsRef}
-          className={`relative min-h-[500px] flex items-center justify-center scroll-animate-scale ${skillsVisible ? 'animate' : ''}`}
-        >
+        <div className="relative min-h-[500px] flex items-center justify-center">
           <div className="relative w-full max-w-3xl aspect-square">
             {skills.map((skill, index) => {
               const angle = (index * 360) / skills.length;
@@ -158,10 +148,7 @@ const InteractiveSkills = () => {
         </div>
 
         {/* Skills List */}
-        <div 
-          ref={listRef}
-          className={`mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-animate ${listVisible ? 'animate' : ''}`}
-        >
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
