@@ -4,12 +4,12 @@ import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [currentNameIndex, setCurrentNameIndex] = useState(0);
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
-  const names = [
-    "Fauzi",
-    "Rahmat", 
-    "Febrian"
+  const roles = [
+    "Data Analyst",
+    "Data Manager", 
+    "Business Intelligence"
   ];
 
   useEffect(() => {
@@ -24,11 +24,11 @@ const Hero = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Animasi pergantian nama setiap 2 detik
+  // Animasi pergantian role
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentNameIndex((prevIndex) => (prevIndex + 1) % names.length);
-    }, 2000);
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -84,19 +84,24 @@ const Hero = () => {
 
         <div className="mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <h1 className="text-6xl md:text-8xl font-bold mb-4 glow-text tracking-tight">
-            Hi, I'm <span 
-              key={currentNameIndex}
-              className="text-primary inline-block animate-slide-right"
-            >
-              {names[currentNameIndex]}
-            </span>
+            Hi, I'm <span className="text-primary">Fauzi</span>
           </h1>
-          <div className="text-xl md:text-2xl text-muted-foreground mb-6">
-            <span className="text-primary font-semibold">
-              Saya yang menyukai data analysis
+          <div className="text-xl md:text-2xl text-muted-foreground mb-6 h-8 flex items-center justify-center overflow-hidden">
+            <span 
+              key={currentRoleIndex}
+              className="inline-block text-primary font-semibold animate-slide-right"
+            >
+              {roles[currentRoleIndex]}
             </span>
           </div>
         </div>
+
+        <p className="text-lg md:text-xl max-w-4xl mx-auto mb-12 text-muted-foreground leading-relaxed animate-slide-up" style={{ animationDelay: '1s' }}>
+          Saya adalah mahasiswa Ilmu Informasi semester 4 yang mengkhususkan diri dalam analisis data, 
+          dengan keterampilan yang terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data. 
+          Saya bersemangat untuk mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan 
+          dan terus meningkatkan kemampuan teknis dan analitis saya untuk memecahkan tantangan data yang kompleks.
+        </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: '1.2s' }}>
           <button className="px-8 py-4 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">

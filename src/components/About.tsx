@@ -1,12 +1,12 @@
 
-import { Database, BarChart3, TrendingUp, Brain } from 'lucide-react';
+import { Code, Palette, Zap, Heart } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { icon: Database, title: "Data Management", desc: "MySQL, PostgreSQL, MongoDB" },
-    { icon: BarChart3, title: "Data Analysis", desc: "Statistical Analysis, R, Python" },
-    { icon: TrendingUp, title: "Business Intelligence", desc: "Power BI, Tableau, Reporting" },
-    { icon: Brain, title: "Machine Learning", desc: "Predictive Modeling, AI" }
+    { icon: Code, title: "Development", desc: "React, Node.js, TypeScript" },
+    { icon: Palette, title: "Design", desc: "UI/UX, Figma, Adobe Suite" },
+    { icon: Zap, title: "Performance", desc: "Optimization, SEO, Speed" },
+    { icon: Heart, title: "Passion", desc: "Clean Code, Innovation" }
   ];
 
   return (
@@ -23,18 +23,17 @@ const About = () => {
           {/* Left Content */}
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Saya adalah mahasiswa Ilmu Informasi semester 4 yang mengkhususkan diri dalam analisis data, 
-              dengan keterampilan yang terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data.
+              I'm a passionate full-stack developer with over 5 years of experience 
+              creating digital solutions that make a difference. My journey started 
+              with curiosity about how things work, and it's evolved into a love 
+              for crafting beautiful, functional experiences.
             </p>
             
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Saya bersemangat untuk mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan 
-              dan terus meningkatkan kemampuan teknis dan analitis saya untuk memecahkan tantangan data yang kompleks.
-            </p>
-
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Ketika tidak menganalisis data, Anda akan menemukan saya menjelajahi teknologi baru, 
-              berkontribusi pada proyek open-source, atau berbagi pengetahuan dengan komunitas developer dan data analyst.
+              When I'm not coding, you'll find me exploring new technologies, 
+              contributing to open-source projects, or sharing knowledge with 
+              the developer community. I believe in writing clean, maintainable 
+              code that stands the test of time.
             </p>
 
             <div className="pt-6">
