@@ -1,11 +1,12 @@
-
 import { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [currentNameIndex, setCurrentNameIndex] = useState(0);
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
+  const names = ["Fauzi", "Rahmat", "Febrian"];
   const roles = [
     "Data Analyst",
     "Data Manager", 
@@ -22,6 +23,15 @@ const Hero = () => {
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  // Animasi pergantian nama setiap 2 detik
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentNameIndex((prevIndex) => (prevIndex + 1) % names.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
   }, []);
 
   // Animasi pergantian role
@@ -84,7 +94,12 @@ const Hero = () => {
 
         <div className="mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <h1 className="text-6xl md:text-8xl font-bold mb-4 glow-text tracking-tight">
-            Hi, I'm <span className="text-primary">Fauzi</span>
+            Hi, I'm <span 
+              key={currentNameIndex}
+              className="text-primary animate-slide-right"
+            >
+              {names[currentNameIndex]}
+            </span>
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-6 h-8 flex items-center justify-center overflow-hidden">
             <span 
@@ -96,13 +111,6 @@ const Hero = () => {
           </div>
         </div>
 
-        <p className="text-lg md:text-xl max-w-4xl mx-auto mb-12 text-muted-foreground leading-relaxed animate-slide-up" style={{ animationDelay: '1s' }}>
-          Saya adalah mahasiswa Ilmu Informasi semester 4 yang mengkhususkan diri dalam analisis data, 
-          dengan keterampilan yang terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data. 
-          Saya bersemangat untuk mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan 
-          dan terus meningkatkan kemampuan teknis dan analitis saya untuk memecahkan tantangan data yang kompleks.
-        </p>
-
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: '1.2s' }}>
           <button className="px-8 py-4 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
             Lihat Resume Saya
@@ -112,6 +120,7 @@ const Hero = () => {
           </button>
         </div>
 
+        {/* social media links and chevron down */}
         <div className="flex justify-center space-x-6 mb-16 animate-slide-up" style={{ animationDelay: '1.4s' }}>
           <a href="https://github.com/FauziRahmatFebrian" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 hover:scale-110 group">
             <Github className="w-6 h-6 group-hover:text-primary transition-colors" />
@@ -129,6 +138,7 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* floating dots */}
       <div className="absolute top-20 left-20 w-4 h-4 bg-primary rounded-full animate-float opacity-60" style={{ animationDelay: '1s' }} />
       <div className="absolute top-40 right-32 w-2 h-2 bg-primary rounded-full animate-float opacity-40" style={{ animationDelay: '3s' }} />
       <div className="absolute bottom-32 left-40 w-3 h-3 bg-primary rounded-full animate-float opacity-50" style={{ animationDelay: '2s' }} />

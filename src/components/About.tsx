@@ -1,12 +1,12 @@
 
-import { Code, Palette, Zap, Heart } from 'lucide-react';
+import { BarChart3, Database, TrendingUp, Brain } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { icon: Code, title: "Development", desc: "React, Node.js, TypeScript" },
-    { icon: Palette, title: "Design", desc: "UI/UX, Figma, Adobe Suite" },
-    { icon: Zap, title: "Performance", desc: "Optimization, SEO, Speed" },
-    { icon: Heart, title: "Passion", desc: "Clean Code, Innovation" }
+    { icon: BarChart3, title: "Data Analysis", desc: "Statistical Analysis, Data Mining, Insights" },
+    { icon: Database, title: "Data Management", desc: "SQL, Data Warehousing, ETL Processes" },
+    { icon: TrendingUp, title: "Data Visualization", desc: "Dashboard Creation, Charts, Reporting" },
+    { icon: Brain, title: "Predictive Analytics", desc: "Machine Learning, Forecasting Models" }
   ];
 
   return (
@@ -23,17 +23,18 @@ const About = () => {
           {/* Left Content */}
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I'm a passionate full-stack developer with over 5 years of experience 
-              creating digital solutions that make a difference. My journey started 
-              with curiosity about how things work, and it's evolved into a love 
-              for crafting beautiful, functional experiences.
+              Saya adalah mahasiswa Ilmu Informasi semester 4 yang mengkhususkan diri dalam analisis data, 
+              dengan keterampilan yang terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data.
             </p>
             
             <p className="text-lg leading-relaxed text-muted-foreground">
-              When I'm not coding, you'll find me exploring new technologies, 
-              contributing to open-source projects, or sharing knowledge with 
-              the developer community. I believe in writing clean, maintainable 
-              code that stands the test of time.
+              Saya bersemangat untuk mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan 
+              dan terus meningkatkan kemampuan teknis dan analitis saya untuk memecahkan tantangan data yang kompleks.
+            </p>
+
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Dengan fokus pada data analysis, saya memiliki pengalaman dalam menggunakan berbagai tools 
+              seperti Excel, Power BI, dan Tableau untuk menciptakan visualisasi data yang informatif dan dashboard interaktif.
             </p>
 
             <div className="pt-6">
