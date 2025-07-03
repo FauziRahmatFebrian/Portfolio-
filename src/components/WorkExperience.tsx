@@ -5,7 +5,7 @@ const WorkExperience = () => {
   const experiences = [
     {
       title: "Finance Admin",
-      company: "PT. Data Solutions",
+      company: "seeouo.id",
       period: "2024 - 2025",
       location: "Jakarta, Indonesia",
       description: [

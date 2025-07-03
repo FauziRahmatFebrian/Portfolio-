@@ -38,9 +38,14 @@ const About = () => {
             </p>
 
             <div className="pt-6">
-              <button className="px-6 py-3 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105">
+              <a 
+                href="https://drive.google.com/file/d/11sVaQTwo0nD9QZh8piBRuu1auHXFUhgt/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105 inline-block"
+              >
                 Download Resume
-              </button>
+              </a>
             </div>
           </div>
 

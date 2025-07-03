@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -77,12 +78,12 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="text-center z-10 px-4">
-        {/* Profile Photo - moved down with additional top margin */}
+        {/* Profile Photo - updated with your image */}
         <div className="mb-8 mt-12 animate-slide-up flex justify-center">
           <div className="relative">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20 animate-glow">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                src="/lovable-uploads/b9a3bacf-4df3-46db-8b18-0db96f46c4b5.png"
                 alt="Profile Photo"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />
@@ -112,9 +113,14 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: '1.2s' }}>
-          <button className="px-8 py-4 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
+          <a 
+            href="https://drive.google.com/file/d/11sVaQTwo0nD9QZh8piBRuu1auHXFUhgt/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-primary text-black font-semibold rounded-full hover:bg-primary/80 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+          >
             Lihat Resume Saya
-          </button>
+          </a>
           <button className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-black transition-all duration-300 hover:scale-105">
             Hubungi Saya
           </button>

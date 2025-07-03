@@ -5,7 +5,7 @@ const Education = () => {
   const education = [
     {
       degree: "S1 Sains Informasi",
-      institution: "Universitas Indonesia",
+      institution: "Universitas Pembangunan Nasional \"Veteran\" Jakarta",
       period: "2023 - Sekarang",
       description: "Mengkhususkan diri dalam analisis data dengan fokus pada penggunaan R, Python, dan SQL untuk pemrosesan dan analisis data",
       achievements: ["IPK: 3.75/4.00", "Semester 4", "Fokus pada Data Science dan Information Systems"],

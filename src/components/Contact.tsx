@@ -11,8 +11,14 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Pesan dari ${formData.name}`);
+    const body = encodeURIComponent(`Nama: ${formData.name}\nEmail: ${formData.email}\n\nPesan:\n${formData.message}`);
+    const mailtoLink = `mailto:fauzifebri428@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -46,6 +52,25 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Email</h3>
                   <p className="text-muted-foreground">fauzifebri428@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="glass-effect p-6 rounded-2xl hover:bg-primary/5 transition-all duration-300">
+              <div className="flex items-center space-x-4">
+                <div className="p-3 bg-primary/20 rounded-full">
+                  <Phone className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">WhatsApp</h3>
+                  <a 
+                    href="https://wa.me/6283875922134" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    0838 7592 2134
+                  </a>
                 </div>
               </div>
             </div>
