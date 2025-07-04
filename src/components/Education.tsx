@@ -44,51 +44,62 @@ const Education = () => {
         </div>
 
         {/* Education Timeline */}
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary/30 hidden md:block"></div>
+        <div className="relative max-w-4xl mx-auto">
+          {/* Timeline Line - Centered and straight */}
+          <div className="absolute left-1/2 transform -translate-x-0.5 w-0.5 bg-primary/50 hidden md:block" style={{ height: 'calc(100% - 40px)', top: '40px' }}></div>
           
-          {education.map((edu, index) => (
-            <div 
-              key={edu.degree}
-              className={`relative mb-12 ${index % 2 === 0 ? 'md:pr-1/2 md:text-right' : 'md:pl-1/2 md:ml-8'} animate-slide-up`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              {/* Timeline Dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block"></div>
-              
-              <div className={`glass-effect rounded-2xl p-6 hover:bg-primary/10 transition-all duration-300 hover:scale-105 group ${index % 2 === 0 ? 'md:mr-8' : ''}`}>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors">
-                    <edu.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Calendar className="w-4 h-4 text-primary" />
-                      <span className="text-sm text-primary font-semibold">{edu.period}</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                      {edu.degree}
-                    </h3>
-                    <h4 className="text-lg text-muted-foreground mb-3 font-semibold">
-                      {edu.institution}
-                    </h4>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
-                      {edu.description}
-                    </p>
-                    <div className="space-y-2">
-                      {edu.achievements.map((achievement, i) => (
-                        <div key={i} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          <span className="text-sm text-foreground">{achievement}</span>
+          <div className="space-y-16">
+            {education.map((edu, index) => (
+              <div 
+                key={edu.degree}
+                className="relative animate-slide-up"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {/* Timeline Dot - Precisely centered */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10 hidden md:block"></div>
+                
+                {/* Content Container */}
+                <div className={`flex items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                  {/* Left/Right Content */}
+                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
+                    <div className={`glass-effect rounded-2xl p-6 hover:bg-primary/10 transition-all duration-300 hover:scale-105 group ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                      <div className={`flex items-start gap-4 ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                        <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors flex-shrink-0">
+                          <edu.icon className="w-6 h-6 text-primary" />
                         </div>
-                      ))}
+                        <div className="flex-1">
+                          <div className={`flex items-center gap-2 mb-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                            <Calendar className="w-4 h-4 text-primary" />
+                            <span className="text-sm text-primary font-semibold">{edu.period}</span>
+                          </div>
+                          <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                            {edu.degree}
+                          </h3>
+                          <h4 className="text-lg text-muted-foreground mb-3 font-semibold">
+                            {edu.institution}
+                          </h4>
+                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                            {edu.description}
+                          </p>
+                          <div className="space-y-2">
+                            {edu.achievements.map((achievement, i) => (
+                              <div key={i} className={`flex items-center gap-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                                <span className="text-sm text-foreground">{achievement}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  
+                  {/* Spacer for the other half */}
+                  <div className="hidden md:block w-1/2"></div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Certifications */}
