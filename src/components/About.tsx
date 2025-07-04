@@ -29,10 +29,7 @@ const About = () => {
             
             <p className="text-lg leading-relaxed text-muted-foreground">
               Saya bersemangat untuk mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan 
-              dan terus meningkatkan kemampuan teknis dan analitis saya untuk memecahkan tantangan data yang kompleks.
-            </p>
-
-            <p className="text-lg leading-relaxed text-muted-foreground">
+              dan terus meningkatkan kemampuan teknis dan analitis saya untuk memecahkan tantangan data yang kompleks. 
               Dengan fokus pada data analysis, saya memiliki pengalaman dalam menggunakan berbagai tools 
               seperti Excel, Power BI, dan Tableau untuk menciptakan visualisasi data yang informatif dan dashboard interaktif.
             </p>

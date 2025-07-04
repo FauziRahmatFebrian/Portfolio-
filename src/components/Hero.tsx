@@ -44,6 +44,30 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleContactClick = () => {
+    // Create vCard format for contact
+    const vCard = `BEGIN:VCARD
+VERSION:3.0
+FN:Fauzi Rahmat Febrian
+TEL:+6283875922134
+EMAIL:fauzifebri428@gmail.com
+URL:https://www.linkedin.com/in/fauzirf27
+URL:https://github.com/FauziRahmatFebrian
+NOTE:Data Analyst - Mahasiswa Ilmu Informasi UPN Veteran Jakarta
+END:VCARD`;
+
+    // Create blob and download link
+    const blob = new Blob([vCard], { type: 'text/vcard' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Fauzi_Rahmat_Febrian_Contact.vcf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Animated Background Elements */}
@@ -121,7 +145,10 @@ const Hero = () => {
           >
             Lihat Resume Saya
           </a>
-          <button className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-black transition-all duration-300 hover:scale-105">
+          <button 
+            onClick={handleContactClick}
+            className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-black transition-all duration-300 hover:scale-105"
+          >
             Hubungi Saya
           </button>
         </div>
