@@ -7,31 +7,7 @@ const Projects = () => {
       title: "Finance Admin",
       description: "Membuat laporan keuangan mingguan dan bulanan, mencatat arus kas harian secara akurat, serta mengembangkan sistem pelaporan sederhana yang meningkatkan efisiensi pengecekan transaksi hingga 20%.",
       tech: ["Excel", "Financial Analysis", "Data Management", "Reporting"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Website Developer BEM FISIP UPNVJ",
-      description: "Membangun dan mengelola website menggunakan HTML, CSS, dan PHP dengan fokus pada desain responsif, struktur kode yang rapi, dan tampilan antarmuka yang ramah pengguna.",
-      tech: ["HTML", "CSS", "PHP", "Responsive Design"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-      github: "https://github.com/FauziRahmatFebrian/landing_page.git",
-      live: "#"
-    },
-    {
-      title: "Website Developer Portfolio Pribadi",
-      description: "Web Developer spesialis React JS, membangun UI dinamis dengan Redux & Tailwind CSS. Saya mengintegrasikan Google Gemini API untuk menciptakan fitur AI inovatif. Dengan pemahaman backend Node.js, saya siap mengembangkan solusi web cerdas yang efisien.",
-      tech: ["React", "Redux", "Tailwind CSS", "Gemini API"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=300&fit=crop",
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Scrapping Data",
-      description: "Proyek ini berfokus pada pengambilan data dari situs web menggunakan bahasa pemrograman Python. Data yang berhasil dikumpulkan kemudian diolah dan digunakan untuk analisis lanjutan.",
-      tech: ["Python", "Web Scraping", "Data Processing", "Analysis"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
+      image: "/lovable-uploads/7ed7a174-f271-4129-b87f-fcdb81846a64.png",
       github: "#",
       live: "#"
     },
@@ -39,7 +15,31 @@ const Projects = () => {
       title: "Power BI Dashboard",
       description: "Membangun dashboard Power BI dari data keuangan mentah. Menganalisis metrik kunci (laba rugi, arus kas) dengan Power Query & DAX untuk wawasan strategis dan pelacakan KPI secara real-time.",
       tech: ["Power BI", "Power Query", "DAX", "Financial Analysis"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop",
+      image: "/lovable-uploads/193841af-6dc5-469f-a57a-3ebace2c7927.png",
+      github: "#",
+      live: "#"
+    },
+    {
+      title: "Scrapping Data",
+      description: "Proyek ini berfokus pada pengambilan data dari situs web menggunakan bahasa pemrograman Python. Data yang berhasil dikumpulkan kemudian diolah dan digunakan untuk analisis lanjutan.",
+      tech: ["Python", "Web Scraping", "Data Processing", "Analysis"],
+      image: "/lovable-uploads/7ff85d1d-5d96-498d-b960-a2ba345cd1d9.png",
+      github: "#",
+      live: "#"
+    },
+    {
+      title: "Website Developer BEM FISIP UPNVJ",
+      description: "Membangun dan mengelola website menggunakan HTML, CSS, dan PHP dengan fokus pada desain responsif, struktur kode yang rapi, dan tampilan antarmuka yang ramah pengguna.",
+      tech: ["HTML", "CSS", "PHP", "Responsive Design"],
+      image: "/lovable-uploads/072cdc5e-be23-4a58-8213-f6f3691a8899.png",
+      github: "https://github.com/FauziRahmatFebrian/landing_page.git",
+      live: "#"
+    },
+    {
+      title: "Website Developer Portfolio Pribadi",
+      description: "Web Developer spesialis React JS, membangun UI dinamis dengan Redux & Tailwind CSS. Saya mengintegrasikan Google Gemini API untuk menciptakan fitur AI inovatif. Dengan pemahaman backend Node.js, saya siap mengembangkan solusi web cerdas yang efisien.",
+      tech: ["React", "Redux", "Tailwind CSS", "Gemini API"],
+      image: "/lovable-uploads/ce5475c4-1f4f-4280-bc34-937d4d8264ff.png",
       github: "#",
       live: "#"
     },
@@ -47,15 +47,15 @@ const Projects = () => {
       title: "UI/UX Design Auto Lux Car",
       description: "Proyek UI/UX ini melibatkan proses perancangan antarmuka aplikasi menggunakan tools seperti Figma. Saya membuat wireframe, user flow, hingga prototype interaktif yang berfokus pada pengalaman pengguna (user experience) dan estetika visual.",
       tech: ["Figma", "UI/UX Design", "User Flow", "Prototype"],
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500&h=300&fit=crop",
+      image: "/lovable-uploads/df416bb8-db95-4459-acdc-b914138853c9.png",
       github: "#",
       live: "#"
     },
     {
-      title: "UI/UX Forum Aduan Kekerasan",
+      title: "UI/UX Forum Aduan Kekerasan UPNVJ",
       description: "UI/UX saya merancang solusi dengan empati. Melalui riset, wireframing, & testing, saya menciptakan pengalaman pengguna yang intuitif dan menjawab kebutuhan nyata pengguna.",
       tech: ["Figma", "User Research", "Wireframing", "User Testing"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop",
+      image: "/lovable-uploads/4ab4f67c-4b61-453f-ab03-264a484aed2b.png",
       github: "#",
       live: "https://www.figma.com/proto/bZco3VKbzsyQA1BJyMHKAR/mockup?node-id=345-838&p=f&t=aYqDap3mh9FDZWBY-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=345%3A838&show-proto-sidebar=1"
     }
