@@ -1,5 +1,5 @@
 
-import { Award, Calendar, Building2 } from 'lucide-react';
+import { Award, Calendar, Building2, User } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -54,6 +54,29 @@ const Certifications = () => {
     }
   ];
 
+  const additionalCourses = [
+    {
+      title: "Data Analysis with Python",
+      icon: User
+    },
+    {
+      title: "SQL for Data Science",
+      icon: User
+    },
+    {
+      title: "R Programming Fundamentals",
+      icon: User
+    },
+    {
+      title: "Statistical Analysis Basics",
+      icon: User
+    },
+    {
+      title: "Data Visualization Techniques",
+      icon: User
+    }
+  ];
+
   return (
     <section id="certifications" className="py-20 px-4 bg-gradient-to-b from-card/20 to-background">
       <div className="max-w-6xl mx-auto">
@@ -78,8 +101,8 @@ const Certifications = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {certifications.map((cert, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="group p-1">
-                    <div className="glass-effect rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 animate-slide-up"
+                  <div className="group p-1 h-full">
+                    <div className="glass-effect rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 animate-slide-up h-full flex flex-col"
                          style={{ animationDelay: `${index * 0.1}s` }}>
                       {/* Image Container */}
                       <div className="relative overflow-hidden">
@@ -92,12 +115,12 @@ const Certifications = () => {
                       </div>
 
                       {/* Content */}
-                      <div className="p-6">
+                      <div className="p-6 flex-1 flex flex-col">
                         <div className="flex items-start gap-3 mb-4">
                           <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
                             <Award className="w-6 h-6 text-primary" />
                           </div>
-                          <div className="flex-1">
+                          <div className="flex-1 min-h-0">
                             <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
                               {cert.title}
                             </h3>
@@ -114,7 +137,7 @@ const Certifications = () => {
                           </div>
                         </div>
 
-                        <p className="text-sm text-muted-foreground line-clamp-2">
+                        <p className="text-sm text-muted-foreground line-clamp-2 mt-auto">
                           {cert.description}
                         </p>
                       </div>
@@ -139,8 +162,32 @@ const Certifications = () => {
             <div className="text-muted-foreground">Institusi Berbeda</div>
           </div>
           <div className="text-center p-6 glass-effect rounded-2xl hover:bg-primary/5 transition-colors">
-            <div className="text-3xl font-bold text-primary mb-2">2024</div>
+            <div className="text-3xl font-bold text-primary mb-2">2025</div>
             <div className="text-muted-foreground">Terakhir Diperoleh</div>
+          </div>
+        </div>
+
+        {/* Additional Courses Section */}
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold text-center mb-8 text-primary">
+            Kursus Tambahan
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {additionalCourses.map((course, index) => (
+              <div
+                key={index}
+                className="glass-effect rounded-xl p-4 hover:bg-primary/5 transition-all duration-300 hover:scale-[1.02] border border-primary/20"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <course.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-foreground">
+                    {course.title}
+                  </h4>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
