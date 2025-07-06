@@ -6,6 +6,7 @@ import InteractiveSkills from '../components/InteractiveSkills';
 import Projects from '../components/Projects';
 import WorkExperience from '../components/WorkExperience';
 import Education from '../components/Education';
+import Certifications from '../components/Certifications';
 import ChatAI from '../components/ChatAI';
 import Contact from '../components/Contact';
 
@@ -24,6 +25,7 @@ const Index = () => {
         <Projects />
         <WorkExperience />
         <Education />
+        <Certifications />
         <ChatAI />
         <Contact />
       </main>
