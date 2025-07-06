@@ -1,4 +1,5 @@
 
+import React, { useEffect } from 'react';
 import { Award, Calendar, Building2, User } from 'lucide-react';
 import {
   Carousel,
@@ -6,9 +7,25 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 const Certifications = () => {
+  const [api, setApi] = React.useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    // Auto-scroll every 3 seconds
+    const intervalId = setInterval(() => {
+      api.scrollNext();
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [api]);
+
   const certifications = [
     {
       title: "Staff Mentor - Hello FISIP 2024",
@@ -80,7 +97,7 @@ const Certifications = () => {
   return (
     <section id="certifications" className="py-20 px-4 bg-gradient-to-b from-card/20 to-background">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
             Sertifikasi <span className="text-primary">& Penghargaan</span>
           </h2>
@@ -90,8 +107,9 @@ const Certifications = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: true,
@@ -152,7 +170,7 @@ const Certifications = () => {
         </div>
 
         {/* Statistics */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <div className="text-center p-6 glass-effect rounded-2xl hover:bg-primary/5 transition-colors">
             <div className="text-3xl font-bold text-primary mb-2">6+</div>
             <div className="text-muted-foreground">Sertifikat Diperoleh</div>
@@ -168,7 +186,7 @@ const Certifications = () => {
         </div>
 
         {/* Additional Courses Section */}
-        <div className="mt-20">
+        <div className="mt-20 animate-slide-up" style={{ animationDelay: '0.6s' }}>
           <h3 className="text-2xl font-bold text-center mb-8 text-primary">
             Kursus Tambahan
           </h3>
@@ -176,7 +194,8 @@ const Certifications = () => {
             {additionalCourses.map((course, index) => (
               <div
                 key={index}
-                className="glass-effect rounded-xl p-4 hover:bg-primary/5 transition-all duration-300 hover:scale-[1.02] border border-primary/20"
+                className="glass-effect rounded-xl p-4 hover:bg-primary/5 transition-all duration-300 hover:scale-[1.02] border border-primary/20 animate-slide-up"
+                style={{ animationDelay: `${0.7 + index * 0.1}s` }}
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
