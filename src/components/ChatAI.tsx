@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, MessageCircle } from 'lucide-react';
 
@@ -24,16 +23,34 @@ const ChatAI = () => {
 
   const profileInfo = `
   Nama: Fauzi Rahmat Febrian
-  Profesi: Data Analyst, Data Manager, Business Intelligence
+  Profesi: Data Analyst, Data Manager, Business Intelligence, Product Manager
   Pendidikan: Mahasiswa Ilmu Informasi semester 4
-  Keahlian: R, Python, SQL, Excel, Power BI, Tableau, Data Analysis, Statistical Analysis, Data Mining, Machine Learning
+  Keahlian: R, Python, SQL, Excel, Power BI, Tableau, Data Analysis, Statistical Analysis, Data Mining, Machine Learning, Product Management
   Pengalaman Kerja: Finance Admin di PT. Data Solutions (2024-2025)
   Lokasi: Jakarta, Indonesia
   Email: fauzifebri428@gmail.com
   GitHub: https://github.com/FauziRahmatFebrian
   LinkedIn: https://www.linkedin.com/in/fauzirf27
   
-  Deskripsi: Mahasiswa yang mengkhususkan diri dalam analisis data dengan keterampilan terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data. Bersemangat mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan.
+  Sertifikat dan Kualifikasi:
+  - DSF 37 - Product Management (Dibimbing.id, 2025)
+  - The Complete Data Analyst Bootcamp From Basics To Advanced (Udemy, Juli 2025)
+  - Python in Action: A Practical Course 50+ Real-World Projects (Udemy, Juli 2025)
+  - Staff Mentor - Hello FISIP 2024 (BEM FISIP UPNVJ, September 2024)
+  - Workshop Ngoding dan Design (HIMASIFO FISIP UPNVJ, Mei 2025)
+  - Panitia SIGNAL 2.0 (HIMASIFO, September 2024)
+  - Coding for Data Course (SoloLearn, Februari 2024)
+  - User Experience Course (Dibimbing.id, Mei 2025)
+  - Gomawo Fest 2023 Participant (Beasiswakorea.com, September 2023)
+  
+  Kursus Tambahan:
+  - Data Analysis with Python
+  - SQL for Data Science
+  - R Programming Fundamentals
+  - Statistical Analysis Basics
+  - Data Visualization Techniques
+  
+  Deskripsi: Mahasiswa yang mengkhususkan diri dalam analisis data dan product management dengan keterampilan terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data. Bersemangat mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan bisnis dan pengembangan produk.
   `;
 
   const sendMessage = async () => {

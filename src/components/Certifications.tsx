@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Award, Calendar, Building2, User } from 'lucide-react';
 import {
@@ -27,6 +26,27 @@ const Certifications = () => {
   }, [api]);
 
   const certifications = [
+    {
+      title: "DSF 37 - Product Management",
+      issuer: "Dibimbing.id",
+      date: "2025",
+      image: "/lovable-uploads/6d03bf86-8830-44c5-a38a-c9dd7af5bc81.png",
+      description: "Sertifikat partisipasi dalam program DSF 37 - Product Management"
+    },
+    {
+      title: "The Complete Data Analyst Bootcamp From Basics To Advanced",
+      issuer: "Udemy",
+      date: "Juli 2025",
+      image: "/lovable-uploads/d44bcd15-5384-417c-98b3-532bb5c07665.png",
+      description: "Sertifikat penyelesaian bootcamp data analyst lengkap dari dasar hingga lanjutan"
+    },
+    {
+      title: "Python in Action: A Practical Course 50+ Real-World Projects",
+      issuer: "Udemy",
+      date: "Juli 2025",
+      image: "/lovable-uploads/39ee7542-c51f-4f33-9179-a2573cf57865.png",
+      description: "Sertifikat penyelesaian kursus Python praktis dengan 50+ proyek dunia nyata"
+    },
     {
       title: "Staff Mentor - Hello FISIP 2024",
       issuer: "BEM FISIP UPNVJ",
@@ -172,11 +192,11 @@ const Certifications = () => {
         {/* Statistics */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <div className="text-center p-6 glass-effect rounded-2xl hover:bg-primary/5 transition-colors">
-            <div className="text-3xl font-bold text-primary mb-2">6+</div>
+            <div className="text-3xl font-bold text-primary mb-2">9+</div>
             <div className="text-muted-foreground">Sertifikat Diperoleh</div>
           </div>
           <div className="text-center p-6 glass-effect rounded-2xl hover:bg-primary/5 transition-colors">
-            <div className="text-3xl font-bold text-primary mb-2">4+</div>
+            <div className="text-3xl font-bold text-primary mb-2">6+</div>
             <div className="text-muted-foreground">Institusi Berbeda</div>
           </div>
           <div className="text-center p-6 glass-effect rounded-2xl hover:bg-primary/5 transition-colors">
