@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Award, Calendar, Building2, User } from 'lucide-react';
 import {
@@ -26,6 +27,20 @@ const Certifications = () => {
   }, [api]);
 
   const certifications = [
+    {
+      title: "AI Ignition Training - From Basics to Breakthroughs in AI",
+      issuer: "KUMPUL.ID",
+      date: "Juli 2025",
+      image: "/lovable-uploads/0dd36fb9-3875-4adc-be84-565c780ad438.png",
+      description: "Sertifikat partisipasi dalam program pelatihan AI Ignition dari dasar hingga terobosan dalam AI"
+    },
+    {
+      title: "21st Century Employability Skills Program - Advanced (Top Participant Venturer)",
+      issuer: "Wadhwani Foundation",
+      date: "April 2024",
+      image: "/lovable-uploads/176d9936-1300-4d05-ae00-f29ad66eb106.png",
+      description: "Sertifikat penyelesaian program keterampilan kerja abad 21 tingkat lanjutan sebagai top participant venturer"
+    },
     {
       title: "DSF 37 - Product Management",
       issuer: "Dibimbing.id",
@@ -192,11 +207,11 @@ const Certifications = () => {
         {/* Statistics */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <div className="text-center p-6 glass-effect rounded-2xl hover:bg-primary/5 transition-colors">
-            <div className="text-3xl font-bold text-primary mb-2">9+</div>
+            <div className="text-3xl font-bold text-primary mb-2">11+</div>
             <div className="text-muted-foreground">Sertifikat Diperoleh</div>
           </div>
           <div className="text-center p-6 glass-effect rounded-2xl hover:bg-primary/5 transition-colors">
-            <div className="text-3xl font-bold text-primary mb-2">6+</div>
+            <div className="text-3xl font-bold text-primary mb-2">8+</div>
             <div className="text-muted-foreground">Institusi Berbeda</div>
           </div>
           <div className="text-center p-6 glass-effect rounded-2xl hover:bg-primary/5 transition-colors">

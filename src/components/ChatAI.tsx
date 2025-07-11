@@ -41,6 +41,8 @@ const ChatAI = () => {
   - Finance Admin di seeouo.id (2024-2025): Mengelola pembukuan keuangan dan laporan bulanan, analisis data keuangan, menggunakan Excel dan sistem ERP untuk tracking budget dan expenses, kolaborasi dengan tim finance untuk reconciliation dan audit
   
   Sertifikat dan Kualifikasi:
+  - AI Ignition Training - From Basics to Breakthroughs in AI (KUMPUL.ID, Juli 2025)
+  - 21st Century Employability Skills Program - Advanced sebagai Top Participant Venturer (Wadhwani Foundation, April 2024)
   - DSF 37 - Product Management (Dibimbing.id, 2025)
   - The Complete Data Analyst Bootcamp From Basics To Advanced (Udemy, Juli 2025)
   - Python in Action: A Practical Course 50+ Real-World Projects (Udemy, Juli 2025)
