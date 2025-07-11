@@ -1,7 +1,10 @@
-
 import { ExternalLink, Github, Eye } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Projects = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: projectsRef, isVisible: projectsVisible } = useScrollReveal({ threshold: 0.1 });
+
   const projects = [
     {
       title: "Finance Admin",
@@ -64,7 +67,12 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-1000 ease-out ${
+            headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
             My <span className="text-primary">Projects</span>
           </h2>
@@ -74,12 +82,20 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+          ref={projectsRef}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className="group glass-effect rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02]"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`group glass-effect rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:scale-[1.02] ${
+                projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+              style={{ 
+                transitionDelay: projectsVisible ? `${index * 150}ms` : '0ms',
+                transitionDuration: '800ms'
+              }}
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
