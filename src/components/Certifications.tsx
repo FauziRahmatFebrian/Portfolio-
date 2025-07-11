@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Award, Calendar, Building2, User } from 'lucide-react';
 import {
@@ -35,7 +34,7 @@ const Certifications = () => {
       description: "Sertifikat partisipasi dalam program pelatihan AI Ignition dari dasar hingga terobosan dalam AI"
     },
     {
-      title: "21st Century Employability Skills Program - Advanced (Top Participant Venturer)",
+      title: "top venturer UPNVJ",
       issuer: "Wadhwani Foundation",
       date: "April 2024",
       image: "/lovable-uploads/176d9936-1300-4d05-ae00-f29ad66eb106.png",
