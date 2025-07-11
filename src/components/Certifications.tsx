@@ -34,7 +34,7 @@ const Certifications = () => {
       description: "Sertifikat partisipasi dalam program pelatihan AI Ignition dari dasar hingga terobosan dalam AI"
     },
     {
-      title: "top venturer UPNVJ",
+      title: "Top Venturer UPNVJ",
       issuer: "Wadhwani Foundation",
       date: "April 2024",
       image: "/lovable-uploads/176d9936-1300-4d05-ae00-f29ad66eb106.png",
