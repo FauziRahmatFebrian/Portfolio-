@@ -1,7 +1,10 @@
-
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const WorkExperience = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: experienceRef, isVisible: experienceVisible } = useScrollReveal({ threshold: 0.2 });
+
   const experiences = [
     {
       title: "Finance Admin",
@@ -21,7 +24,12 @@ const WorkExperience = () => {
   return (
     <section id="experience" className="py-20 px-4 bg-gradient-to-b from-card/20 to-background">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-1000 ease-out ${
+            headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 glow-text">
             Pengalaman <span className="text-primary">Kerja</span>
           </h2>
@@ -31,12 +39,20 @@ const WorkExperience = () => {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div 
+          ref={experienceRef}
+          className="space-y-8"
+        >
           {experiences.map((experience, index) => (
             <div 
               key={experience.title}
-              className="group p-8 glass-effect rounded-2xl hover:bg-primary/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 animate-slide-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`group p-8 glass-effect rounded-2xl hover:bg-primary/5 transition-all duration-500 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 ${
+                experienceVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+              }`}
+              style={{ 
+                transitionDelay: experienceVisible ? `${index * 200}ms` : '0ms',
+                transitionDuration: '800ms'
+              }}
             >
               <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                 {/* Left side - Icon and basic info */}

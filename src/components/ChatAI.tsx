@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, MessageCircle } from 'lucide-react';
 
@@ -24,16 +23,53 @@ const ChatAI = () => {
 
   const profileInfo = `
   Nama: Fauzi Rahmat Febrian
-  Profesi: Data Analyst, Data Manager, Business Intelligence
-  Pendidikan: Mahasiswa Ilmu Informasi semester 4
-  Keahlian: R, Python, SQL, Excel, Power BI, Tableau, Data Analysis, Statistical Analysis, Data Mining, Machine Learning
-  Pengalaman Kerja: Finance Admin di PT. Data Solutions (2024-2025)
+  Profesi: Data Analyst, Data Manager, Business Intelligence, Product Manager
+  Pendidikan: Mahasiswa S1 Sains Informasi semester 4 di Universitas Pembangunan Nasional "Veteran" Jakarta (2023 - Sekarang)
+  IPK: 3.75/4.00
+  Keahlian: R, Python, SQL, Excel, Power BI, Tableau, Data Analysis, Statistical Analysis, Data Mining, Machine Learning, Product Management
+  Pengalaman Kerja: Finance Admin di seeouo.id (2024-2025)
   Lokasi: Jakarta, Indonesia
   Email: fauzifebri428@gmail.com
   GitHub: https://github.com/FauziRahmatFebrian
   LinkedIn: https://www.linkedin.com/in/fauzirf27
   
-  Deskripsi: Mahasiswa yang mengkhususkan diri dalam analisis data dengan keterampilan terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data. Bersemangat mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan.
+  Pendidikan Formal:
+  - S1 Sains Informasi, Universitas Pembangunan Nasional "Veteran" Jakarta (2023 - Sekarang) - IPK: 3.75/4.00, Semester 4, Fokus pada Data Science dan Information Systems
+  - SMA, MAN 21 Jakarta Utara (2020 - 2023) - Jurusan IPA
+  
+  Pengalaman Kerja:
+  - Finance Admin di seeouo.id (2024-2025): Mengelola pembukuan keuangan dan laporan bulanan, analisis data keuangan, menggunakan Excel dan sistem ERP untuk tracking budget dan expenses, kolaborasi dengan tim finance untuk reconciliation dan audit
+  
+  Sertifikat dan Kualifikasi:
+  - AI Ignition Training - From Basics to Breakthroughs in AI (KUMPUL.ID, Juli 2025)
+  - Top Venturer UPNVJ (Wadhwani Foundation, April 2024)
+  - DSF 37 - Product Management (Dibimbing.id, 2025)
+  - The Complete Data Analyst Bootcamp From Basics To Advanced (Udemy, Juli 2025)
+  - Python in Action: A Practical Course 50+ Real-World Projects (Udemy, Juli 2025)
+  - Staff Mentor - Hello FISIP 2024 (BEM FISIP UPNVJ, September 2024)
+  - Workshop Ngoding dan Design (HIMASIFO FISIP UPNVJ, Mei 2025)
+  - Panitia SIGNAL 2.0 (HIMASIFO, September 2024)
+  - Coding for Data Course (SoloLearn, Februari 2024)
+  - User Experience Course (Dibimbing.id, Mei 2025)
+  - Gomawo Fest 2023 Participant (Beasiswakorea.com, September 2023)
+  
+  Proyek Terbaru:
+  - Finance Admin Dashboard: Sistem pelaporan keuangan dengan Excel dan analisis data
+  - Power BI Dashboard: Dashboard analisis keuangan dengan Power Query & DAX
+  - Data Scraping Project: Pengambilan data menggunakan Python untuk analisis
+  - Website BEM FISIP UPNVJ: Pengembangan website dengan HTML, CSS, PHP
+  - Portfolio Website: Website portfolio dengan React, Redux, Tailwind CSS, dan Gemini API
+  - UI/UX Design Auto Lux Car: Desain antarmuka aplikasi dengan Figma
+  - UI/UX Forum Aduan Kekerasan UPNVJ: Desain sistem pelaporan dengan fokus UX
+  
+  Kursus Tambahan:
+  - Data Analysis with Python
+  - SQL for Data Science
+  - R Programming Fundamentals
+  - Statistical Analysis Basics
+  - Data Visualization Techniques
+  
+  Deskripsi: Mahasiswa S1 Sains Informasi semester 4 di Universitas Pembangunan Nasional "Veteran" Jakarta yang mengkhususkan diri dalam analisis data dan product management dengan keterampilan terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data. Berpengalaman sebagai Finance Admin di seeouo.id dengan fokus pada analisis data keuangan. Bersemangat mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan bisnis dan pengembangan produk.
   `;
 
   const sendMessage = async () => {
@@ -50,7 +86,7 @@ const ChatAI = () => {
       const requestBody = {
         contents: [{
           parts: [{
-            text: `Kamu adalah AI assistant yang membantu menjawab pertanyaan tentang profil Fauzi Rahmat Febrian. Berikut informasi tentang dia: ${profileInfo}. 
+            text: `Kamu adalah AI assistant yang membantu menjawab pertanyaan tentang profil Fauzi Rahmat Febrian. Berikut informasi lengkap tentang dia: ${profileInfo}. 
             
             Pertanyaan: ${userMessage}
             

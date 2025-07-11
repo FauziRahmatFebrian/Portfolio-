@@ -1,10 +1,13 @@
-
 import { useState, useEffect } from 'react';
 import { Database, BarChart3, Brain, FileSpreadsheet, Zap, Target } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const InteractiveSkills = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [hoveredSkill, setHoveredSkill] = useState<number | null>(null);
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: skillsRef, isVisible: skillsVisible } = useScrollReveal({ threshold: 0.2 });
+  const { ref: listRef, isVisible: listVisible } = useScrollReveal({ threshold: 0.1 });
 
   const skills = [
     {
@@ -60,7 +63,12 @@ const InteractiveSkills = () => {
   return (
     <section id="skills" className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-1000 ease-out ${
+            headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
             Keahlian <span className="text-primary">Profesional</span>
           </h2>
@@ -70,7 +78,12 @@ const InteractiveSkills = () => {
         </div>
 
         {/* Interactive Skills Spheres with closer spacing */}
-        <div className="relative min-h-[500px] flex items-center justify-center">
+        <div 
+          ref={skillsRef}
+          className={`relative min-h-[500px] flex items-center justify-center transition-all duration-1000 ease-out delay-300 ${
+            skillsVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}
+        >
           <div className="relative w-full max-w-3xl aspect-square">
             {skills.map((skill, index) => {
               const angle = (index * 360) / skills.length;
@@ -85,10 +98,11 @@ const InteractiveSkills = () => {
                   key={skill.name}
                   className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group ${
                     hoveredSkill === index ? 'z-[9999]' : 'z-10'
-                  }`}
+                  } ${skillsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                   style={{
                     transform: `translate(-50%, -50%) translate(${x + mousePosition.x * 15}px, ${y + mousePosition.y * 15}px)`,
-                    transition: 'all 0.3s ease-out'
+                    transition: 'all 0.3s ease-out',
+                    transitionDelay: skillsVisible ? `${500 + index * 100}ms` : '0ms'
                   }}
                   onMouseEnter={() => setHoveredSkill(index)}
                   onMouseLeave={() => setHoveredSkill(null)}
@@ -148,14 +162,22 @@ const InteractiveSkills = () => {
         </div>
 
         {/* Skills List */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div 
+          ref={listRef}
+          className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
               <div 
                 key={skill.name}
-                className="glass-effect rounded-lg p-6 hover:bg-primary/10 transition-all duration-300 group cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`glass-effect rounded-lg p-6 hover:bg-primary/10 transition-all duration-500 group cursor-pointer ${
+                  listVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ 
+                  transitionDelay: listVisible ? `${index * 100}ms` : '0ms',
+                  transitionDuration: '600ms'
+                }}
               >
                 <div className="flex items-center space-x-4 mb-3">
                   <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${skill.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
