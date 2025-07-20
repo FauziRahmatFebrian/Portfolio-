@@ -107,7 +107,7 @@ END:VCARD`;
           <div className="relative">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20 animate-glow">
               <img 
-                src="/lovable-uploads/b9a3bacf-4df3-46db-8b18-0db96f46c4b5.png"
+                src="/lovable-uploads/94184024-5eed-4dc3-8890-a565d8c44543.png"
                 alt="Profile Photo"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />

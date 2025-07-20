@@ -27,31 +27,32 @@ const ChatAI = () => {
   Pendidikan: Mahasiswa S1 Sains Informasi semester 4 di Universitas Pembangunan Nasional "Veteran" Jakarta (2023 - Sekarang)
   IPK: 3.75/4.00
   Keahlian: R, Python, SQL, Excel, Power BI, Tableau, Data Analysis, Statistical Analysis, Data Mining, Machine Learning, Product Management
-  Pengalaman Kerja: Finance Admin di seeouo.id (2024-2025)
+  Pengalaman Kerja: Finance Admin di seeouo.id (Januari 2024 - April 2024)
   Lokasi: Jakarta, Indonesia
   Email: fauzifebri428@gmail.com
   GitHub: https://github.com/FauziRahmatFebrian
   LinkedIn: https://www.linkedin.com/in/fauzirf27
+  Website: Fauzi.FRF
   
   Pendidikan Formal:
   - S1 Sains Informasi, Universitas Pembangunan Nasional "Veteran" Jakarta (2023 - Sekarang) - IPK: 3.75/4.00, Semester 4, Fokus pada Data Science dan Information Systems
   - SMA, MAN 21 Jakarta Utara (2020 - 2023) - Jurusan IPA
   
   Pengalaman Kerja:
-  - Finance Admin di seeouo.id (2024-2025): Mengelola pembukuan keuangan dan laporan bulanan, analisis data keuangan, menggunakan Excel dan sistem ERP untuk tracking budget dan expenses, kolaborasi dengan tim finance untuk reconciliation dan audit
+  - Finance Admin di seeouo.id (Januari 2024 - April 2024): Mengelola pembukuan keuangan dan laporan bulanan perusahaan, melakukan analisis data keuangan untuk mendukung pengambilan keputusan, menggunakan Excel dan sistem ERP untuk tracking budget dan expenses, berkolaborasi dengan tim finance untuk proses reconciliation dan audit
   
-  Sertifikat dan Kualifikasi:
+  Sertifikat dan Kualifikasi (11+ sertifikat dari 8+ institusi):
   - AI Ignition Training - From Basics to Breakthroughs in AI (KUMPUL.ID, Juli 2025)
-  - Top Venturer UPNVJ (Wadhwani Foundation, April 2024)
+  - Top Venturer UPNVJ (Wadhwani Foundation, April 2024) - Sertifikat penyelesaian program keterampilan kerja abad 21 tingkat lanjutan sebagai top participant venturer
   - DSF 37 - Product Management (Dibimbing.id, 2025)
   - The Complete Data Analyst Bootcamp From Basics To Advanced (Udemy, Juli 2025)
   - Python in Action: A Practical Course 50+ Real-World Projects (Udemy, Juli 2025)
-  - Staff Mentor - Hello FISIP 2024 (BEM FISIP UPNVJ, September 2024)
-  - Workshop Ngoding dan Design (HIMASIFO FISIP UPNVJ, Mei 2025)
-  - Panitia SIGNAL 2.0 (HIMASIFO, September 2024)
+  - Staff Mentor - Hello FISIP 2024 (BEM FISIP UPNVJ, September 2024) - Sertifikat apresiasi sebagai Staff Mentor
+  - Workshop Ngoding dan Design (HIMASIFO FISIP UPNVJ, Mei 2025) - Sertifikat penghargaan sebagai narasumber workshop
+  - Panitia SIGNAL 2.0 (HIMASIFO, September 2024) - Sertifikat penghargaan sebagai panitia
   - Coding for Data Course (SoloLearn, Februari 2024)
-  - User Experience Course (Dibimbing.id, Mei 2025)
-  - Gomawo Fest 2023 Participant (Beasiswakorea.com, September 2023)
+  - User Experience Course (Dibimbing.id, Mei 2025) - Mengenal dan Memahami User Experience
+  - Gomawo Fest 2023 Participant (Beasiswakorea.com, September 2023) - Education Fair to Study in South Korea
   
   Proyek Terbaru:
   - Finance Admin Dashboard: Sistem pelaporan keuangan dengan Excel dan analisis data
@@ -69,7 +70,13 @@ const ChatAI = () => {
   - Statistical Analysis Basics
   - Data Visualization Techniques
   
-  Deskripsi: Mahasiswa S1 Sains Informasi semester 4 di Universitas Pembangunan Nasional "Veteran" Jakarta yang mengkhususkan diri dalam analisis data dan product management dengan keterampilan terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data. Berpengalaman sebagai Finance Admin di seeouo.id dengan fokus pada analisis data keuangan. Bersemangat mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan bisnis dan pengembangan produk.
+  Fitur Portfolio:
+  - Sertifikat dapat diklik untuk melihat dalam ukuran besar dengan popup dialog
+  - Chat AI interaktif menggunakan Gemini API untuk menjawab pertanyaan tentang profil
+  - Animasi scrolling yang responsif dan smooth
+  - Design yang modern dengan glass effect dan gradients
+  
+  Deskripsi: Mahasiswa S1 Sains Informasi semester 4 di Universitas Pembangunan Nasional "Veteran" Jakarta yang mengkhususkan diri dalam analisis data dan product management dengan keterampilan terbukti dalam R, Python, dan SQL untuk mengumpulkan, memproses, dan menganalisis data. Berpengalaman sebagai Finance Admin di seeouo.id (Januari-April 2024) dengan fokus pada analisis data keuangan. Memiliki 11+ sertifikat dari berbagai institusi dan aktif dalam organisasi kampus. Bersemangat mengubah data menjadi wawasan yang dapat ditindaklanjuti untuk mendukung pengambilan keputusan bisnis dan pengembangan produk.
   `;
 
   const sendMessage = async () => {

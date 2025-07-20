@@ -9,7 +9,7 @@ const WorkExperience = () => {
     {
       title: "Finance Admin",
       company: "seeouo.id",
-      period: "2024 - 2025",
+      period: "Januari 2024 - April 2024",
       location: "Jakarta, Indonesia",
       description: [
         "Mengelola pembukuan keuangan dan laporan bulanan perusahaan",

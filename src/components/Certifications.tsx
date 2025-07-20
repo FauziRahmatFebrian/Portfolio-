@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Award, Calendar, Building2, User } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Award, Calendar, Building2, User, X } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import {
   Carousel,
@@ -9,9 +9,11 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const Certifications = () => {
   const [api, setApi] = React.useState<CarouselApi>();
+  const [selectedCert, setSelectedCert] = useState<any>(null);
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
   const { ref: carouselRef, isVisible: carouselVisible } = useScrollReveal({ threshold: 0.1 });
   const { ref: statsRef, isVisible: statsVisible } = useScrollReveal({ threshold: 0.2 });
@@ -176,13 +178,18 @@ const Certifications = () => {
                            transitionDelay: carouselVisible ? `${400 + index * 100}ms` : '0ms',
                            transitionDuration: '600ms'
                          }}>
-                      <div className="relative overflow-hidden">
+                      <div className="relative overflow-hidden cursor-pointer" onClick={() => setSelectedCert(cert)}>
                         <img 
                           src={cert.image} 
                           alt={cert.title}
                           className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="bg-primary/20 backdrop-blur-sm rounded-full p-3">
+                            <span className="text-white font-semibold text-sm">Klik untuk memperbesar</span>
+                          </div>
+                        </div>
                       </div>
 
                       <div className="p-6 flex-1 flex flex-col">
@@ -283,6 +290,45 @@ const Certifications = () => {
             ))}
           </div>
         </div>
+
+        {/* Certificate Popup Dialog */}
+        <Dialog open={!!selectedCert} onOpenChange={() => setSelectedCert(null)}>
+          <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-none">
+            <div className="relative">
+              <button
+                onClick={() => setSelectedCert(null)}
+                className="absolute -top-10 right-0 z-50 p-2 bg-black/50 hover:bg-black/70 rounded-full transition-colors"
+              >
+                <X className="w-6 h-6 text-white" />
+              </button>
+              {selectedCert && (
+                <div className="bg-background rounded-2xl overflow-hidden shadow-2xl">
+                  <div className="relative">
+                    <img 
+                      src={selectedCert.image} 
+                      alt={selectedCert.title}
+                      className="w-full h-auto max-h-[70vh] object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-2">{selectedCert.title}</h3>
+                    <div className="flex items-center gap-4 mb-4 text-muted-foreground">
+                      <div className="flex items-center">
+                        <Building2 className="w-4 h-4 mr-2 text-primary" />
+                        {selectedCert.issuer}
+                      </div>
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2 text-primary" />
+                        {selectedCert.date}
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground">{selectedCert.description}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
