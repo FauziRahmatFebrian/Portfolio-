@@ -101,15 +101,15 @@ END:VCARD`;
       </div>
 
       {/* Main Content */}
-      <div className="text-center z-10 px-4">
-        {/* Profile Photo - updated with your image */}
-        <div className="mb-8 mt-12 animate-slide-up flex justify-center">
-          <div className="relative">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20 animate-glow">
+      <div className="text-center z-10 px-4 w-full max-w-4xl mx-auto">
+        {/* Profile Photo - centered */}
+        <div className="mb-8 mt-12 animate-slide-up flex justify-center items-center w-full">
+          <div className="relative flex justify-center">
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20 animate-glow mx-auto">
               <img 
-                src="/lovable-uploads/b9a3bacf-4df3-46db-8b18-0db96f46c4b5.png"
+                src="/lovable-uploads/94184024-5eed-4dc3-8890-a565d8c44543.png"
                 alt="Profile Photo"
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-500"
               />
             </div>
             <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full animate-pulse"></div>

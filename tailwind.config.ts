@@ -26,32 +26,32 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#00ff88',
-					foreground: '#000000'
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					DEFAULT: '#1a1a1a',
-					foreground: '#00ff88'
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				muted: {
-					DEFAULT: '#333333',
-					foreground: '#888888'
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: '#00ff88',
-					foreground: '#000000'
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
-					DEFAULT: '#1a1a1a',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))'
 				},
 				card: {
-					DEFAULT: '#1a1a1a',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -91,8 +91,8 @@ export default {
 					'50%': { transform: 'translateY(-20px)' }
 				},
 				'glow': {
-					'0%, 100%': { boxShadow: '0 0 20px #00ff88' },
-					'50%': { boxShadow: '0 0 40px #00ff88, 0 0 60px #00ff88' }
+					'0%, 100%': { boxShadow: '0 0 20px #3b82f6' },
+					'50%': { boxShadow: '0 0 40px #3b82f6, 0 0 60px #3b82f6' }
 				},
 				'slide-up': {
 					'0%': { transform: 'translateY(100px)', opacity: '0' },

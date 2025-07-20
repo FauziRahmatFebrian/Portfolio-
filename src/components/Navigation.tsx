@@ -33,7 +33,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="text-2xl font-bold glow-text">
             <span className="text-white">Fauzi</span>
-            <span className="text-primary">.dev</span>
+            <span className="text-primary">.FRF</span>
           </div>
 
           {/* Desktop Navigation */}

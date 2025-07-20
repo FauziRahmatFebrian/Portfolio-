@@ -9,44 +9,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 120 100% 90%;
+    --background: 220 100% 4%;
+    --foreground: 210 100% 95%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 120 100% 90%;
+    --card: 220 50% 8%;
+    --card-foreground: 210 100% 95%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 120 100% 90%;
+    --popover: 220 50% 8%;
+    --popover-foreground: 210 100% 95%;
 
-    --primary: 144 100% 53%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 144 100% 53%;
+    --secondary: 220 50% 12%;
+    --secondary-foreground: 210 100% 70%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 53%;
+    --muted: 220 30% 15%;
+    --muted-foreground: 210 20% 65%;
 
-    --accent: 144 100% 53%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 210 100% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 144 100% 53%;
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 210 100% 60%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 7%;
-    --sidebar-foreground: 120 100% 90%;
-    --sidebar-primary: 144 100% 53%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 120 100% 90%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 144 100% 53%;
+    --sidebar-background: 220 100% 4%;
+    --sidebar-foreground: 210 100% 95%;
+    --sidebar-primary: 210 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 50% 15%;
+    --sidebar-accent-foreground: 210 100% 90%;
+    --sidebar-border: 220 30% 18%;
+    --sidebar-ring: 210 100% 60%;
   }
 }
 
@@ -57,7 +57,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+    background: linear-gradient(135deg, #0a0f29 0%, #1a2a52 50%, #0a0f29 100%);
   }
 
   html {
@@ -67,11 +67,11 @@ All colors MUST be HSL.
 
 @layer components {
   .glow-text {
-    text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88;
+    text-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #3b82f6;
   }
 
   .gradient-border {
-    background: linear-gradient(45deg, #00ff88, #000000, #00ff88);
+    background: linear-gradient(45deg, #3b82f6, #1e3a8a, #3b82f6);
     background-size: 400% 400%;
     animation: gradient 4s ease infinite;
   }
@@ -83,9 +83,9 @@ All colors MUST be HSL.
   }
 
   .glass-effect {
-    background: rgba(26, 26, 26, 0.3);
+    background: rgba(30, 58, 138, 0.2);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.3);
   }
 
   .text-cycling {
